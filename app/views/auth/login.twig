@@ -1,0 +1,37 @@
+{% extends 'templates/adminauth.twig' %}
+
+{% block title %}{{ lang.login }}{% endblock %}
+
+{% block content %}
+    <div id="login-page">
+        <div class="container">
+            <form class="form-login" action="{{ urlFor('login.post') }}" method="post" autocomplete="off">
+                <h2 class="form-login-heading">{{ lang.log_in }}</h2>
+                <div class="login-wrap">
+                    <input type="text" class="form-control" placeholder="Login/Email" autofocus name="identifier" id="identifier">
+                    {% if errors.has('identifier') %}{{ errors.first('identifier') }}{% endif %}
+                    <br>
+                    <input type="password" class="form-control" placeholder="{{ lang.password }}" name="password" id="password">
+                    {% if errors.has('password') %}{{ errors.first('password') }}{% endif %}
+                    <label class="checkbox">
+		                <span class="pull-right">
+                            <input type="checkbox" name="remember" id="remember"/><label for="remember">{{ lang.rememberMe }}</label>
+		                </span>
+		                <span class="pull-left">
+		                    <a href="#Forgot"> Zapomniałeś hasła?</a>
+		                </span>
+                    </label>
+                    <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> {{ lang.log_in }}</button>
+                    <input type="hidden" name="{{ csrf_key }}" value="{{ csrf_token }}">
+                    <hr>
+                    <div class="registration">
+                        {{ lang.noAccount }}<br/>
+                        <a class="" href="#">
+                            {{ lang.createAcc }}
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+ <channel>
+  <title>elePHPant</title>
+  <link>http://elephpant.pl/</link>
+  <description>Informacje o nowościach naszej firmy</description>
+   <item>
+     <title>Siewo lubi w dupę</title>
+     <pubDate>31/02/2018</pubDate>
+     <link>http://elephpant.pl/blog/1</link>
+     <description>Niemoralna propozycja Otleta w końcu poskutkowała i Siewo dał w dupę Pudzanowi.</description>
+   </item>
+ </channel>
+</rss>

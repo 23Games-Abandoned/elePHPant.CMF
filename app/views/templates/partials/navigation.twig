@@ -1,0 +1,25 @@
+{%  if auth %}
+    <p>{{ lang.hello }} {{ auth.getFullName }}!</p>
+    <img src="{{ auth.getAvatarUrl({size:150}) }}"/>
+{% endif %}
+
+<ul>
+    <li><a href="{{ urlFor('home') }}">{{ lang.home }}</a></li>
+    {% if auth %}
+        <li><a href="{{ urlFor('logout') }}">{{ lang.logout }}</a></li>
+        <li><a href="{{ urlFor('user.profile', {username: auth.username}) }}">{{ lang.yourProfile }}</a></li>
+        <li><a href="{{ urlFor('auth.password.change') }}">{{ lang.changePass }}</a></li>
+        <li><a href="{{ urlFor('account.profile') }}">{{ lang.updateProfile }}</a></li>
+        {% if auth.isAdmin %}
+        <li><a href="{{ urlFor('admin.dashboard') }}">{{ lang.adminPanel }}</a></li>
+        {% endif %}
+    {% else %}
+    <li><a href="{{ urlFor('login') }}">{{ lang.login }}</a></li>
+    <li><a href="{{ urlFor('register') }}">{{ lang.register }}</a></li>
+    {% endif %}
+    <li><a href="{{ urlFor('user.all') }}">{{ lang.allUser }}</a></li>
+</ul>
+
+{% if auth.hasPermissions('can_post_topic') %}
+    Can post topic
+{% endif %}

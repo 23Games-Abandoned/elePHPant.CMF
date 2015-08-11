@@ -1,0 +1,12 @@
+<!Doctype html>
+<html lang="{{ lang.language }}">
+<head>
+    <meta charset="utf-8">
+    <title>elePHPant | {% block title %}{% endblock %}</title>
+    {% include 'templates/partials/messages.twig' %}
+</head>
+<body>
+    {% include 'templates/partials/navigation.twig' %}
+    {% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,61 @@
+{% extends 'templates/admin.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <section class="wrapper site-min-height">
+        <div class="row">
+            <div class="col-lg-12 main-chart">
+                <div class="row mtbox">
+                    <div class="row mt">
+                        <a style="display:block" href="{{ urlFor('admin.page') }}">
+                            <div class="col-md-2 col-sm-2 col-md-offset-1 box0">
+                                <div class="box1">
+                                    <span class="li_news"></span>
+                                    <h3>Blog</h3>
+                                </div>
+                                <p>Zarządzaj swoimi wpisami w prosty sposób!</p>
+                            </div>
+                        </a>
+                        <a style="display:block" href="{{ urlFor('admin.page') }}">
+                            <div class="col-md-2 col-sm-2 box0">
+                                <div class="box1">
+                                    <span class="li_stack"></span>
+                                    <h3>Strony</h3>
+                                </div>
+                                <p>Dodawaj nowe strony i zarządzaj nimi.</p>
+                            </div>
+                        </a>
+                        <a style="display:block" href="http://klient.elephpant.pl">
+                            <div class="col-md-2 col-sm-2 box0">
+                                <div class="box1">
+                                    <span class="li_lock"></span>
+                                    <h3>Aktualizacja</h3>
+                                </div>
+                                <p>Chcesz aktualizację? Zapraszamy!</p>
+                            </div>
+                        </a>
+                        <a style="display:block" href="{{ urlFor('admin.page') }}">
+                            <div class="col-md-2 col-sm-2 box0">
+                                <div class="box1">
+                                    <span class="li_user"></span>
+                                    <h3>Użytkownicy</h3>
+                                </div>
+                                <p>Zarządzanie kontami w serwisie</p>
+                            </div>
+                        </a>
+                        <a style="display:block" href="{{ urlFor('admin.page') }}">
+                            <div class="col-md-2 col-sm-2 box0">
+                                <div class="box1">
+                                    <span class="li_settings"></span>
+                                    <h3>Ustawienia</h3>
+                                </div>
+                                <p>Ustawienia całej aplikacji.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
